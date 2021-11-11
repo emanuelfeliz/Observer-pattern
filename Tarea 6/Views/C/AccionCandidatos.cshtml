@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Tarea_6.Models.CandidatosModel>
+@{
+    ViewData["Title"] = "AccionCandidatos";
+}
+
+<div class="text-center">
+    <h1 class="mb-5">Candidatos:</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Correo)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Salario)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salario)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditarCandidato", new { Cedula = item.Cedula })
+                    @Html.ActionLink("Delete", "Delete", new { })
+                </td>
+            </tr>
+            }
+
+
+
+        </tbody>
+
+
+    </table>
+</div>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Candidatos";
+}
+
+
+
+<div class="text-center" style="margin-top: 5%">
+
+    <h2 class="mb-4">Candidatos</h2>
+
+    <form action="/C/AccionCandidatos" enctype="multipart/form-data" method="post">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="cedula" id="cedula" placeholder="Ingrese la cedula">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese su correo">
+        </div>
+        <div class="mb-3">
+            <input type="number" class="form-control" name="salario" id="salario" placeholder="Ingrese la aspiración salarial">
+        </div>
+
+
+        <input type="submit" class="btn btn-primary" style="margin-right:93%" value="Guardar">
+
+    </form>
+</div>
+

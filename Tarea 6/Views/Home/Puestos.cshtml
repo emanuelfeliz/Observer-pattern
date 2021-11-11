@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Puestos";
+}
+
+<div class="text-center" style="margin-top: 5%">
+    <h2 class="mb-4">Puestos: </h2>
+    <form action="/Home/PuestoGuardado" enctype="multipart/form-data" method="post">
+
+        <div class="mb-3">
+            <input type="text" class="form-control" name="puesto" placeholder="Ingrese el puesto">
+        </div>
+        <div class="mb-3">
+            <input type="number" class="form-control" name="salario" placeholder="Ingrese el salario al que aspira">
+        </div>
+        <div class="mb-3">
+            <select class="form-control" name="estatus" id="exampleFormControlSelect1">
+                <option selected>Estatus</option>
+                <option value="vacante">Vacante</option>
+                <option value="ocupado">Ocupado</option>
+            </select>
+        </div>
+
+            <input type="submit" class="btn btn-primary" style="margin-right:93%" value="Guardar">
+
+
+
+
+
+    </form>
+</div>
+
